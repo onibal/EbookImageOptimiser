@@ -4,7 +4,7 @@ Parameter class for image processing settings.
 
 from dataclasses import dataclass, field
 from pathlib import Path
-import constants
+from src import constants
 
 
 @dataclass

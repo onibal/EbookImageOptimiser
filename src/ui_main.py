@@ -4,7 +4,6 @@
 PySide6-based batch image processor for Kobo Libra Colour.
 """
 
-import os
 from pathlib import Path
 from typing import List, Optional
 
@@ -17,10 +16,10 @@ from PySide6.QtWidgets import (
     QGroupBox, QCheckBox, QSlider, QTextEdit
 )
 
-import constants
-import params_class
-import helper
-import worker_class
+from src import constants
+from src import params_class
+from src import helper
+from src import worker_class
 
 
 # -----------------------------
@@ -36,9 +35,9 @@ class MainWindow(QMainWindow):
         self.resize(840, 640)
 
         # Set window icon
-        icon_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'app.ico')
-        if os.path.exists(icon_path):
-            self.setWindowIcon(QIcon(icon_path))
+        icon_path = Path(__file__).parent.parent / 'app.ico'
+        if icon_path.exists():
+            self.setWindowIcon(QIcon(str(icon_path)))
 
         # State variables (kept as widget values)
         self.thread: Optional[QThread] = None

@@ -6,13 +6,13 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from ui_main import MainWindow
+import src.ui_main
 
 
 def main():
     """Initialize and run the application."""
     app = QApplication(sys.argv)
-    w = MainWindow()
+    w = src.ui_main.MainWindow()
     w.show()
     sys.exit(app.exec())
 

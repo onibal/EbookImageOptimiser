@@ -10,8 +10,8 @@ from typing import List, Tuple
 # Config (edit as needed)
 # -----------------------------
 APP_NAME = "EbookImageOptimiser"
-ENTRY_POINT = "src/ui_main.py"   # your PySide6 UI file
-ICON_FILE = "app.ico"                 # optional; set to None or missing to skip
+ENTRY_POINT = "app.py"   # your PySide6 UI file
+ICON_FILE = "app.ico"
 VENV_DIR = ".venv"
 DIST_DIR = "dist"
 

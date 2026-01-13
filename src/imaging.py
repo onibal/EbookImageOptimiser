@@ -7,7 +7,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageEnhance, ImageOps
 
-import params_class
+from src import params_class
 
 
 def detect_faces_cv(img_rgb: Image.Image) -> List[Tuple[int, int, int, int]]:

@@ -7,9 +7,9 @@ from typing import List
 
 from PySide6.QtCore import QObject, Signal
 
-import constants
-import imaging
-import params_class
+from src import constants
+from src import imaging
+from src import params_class
 
 
 class BatchWorker(QObject):
