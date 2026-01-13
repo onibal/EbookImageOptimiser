@@ -1,25 +1,13 @@
 # EbookImageOptimiser
 
+Batch image processor to optimise images, for an e-book screensaver. Unused, e-book can be used as photo display in the house, as screensavers. One issue is that without light from e-book, the photo are gray, dark (especially on Kobo Libra Colour).
 
+This app take a folder of photos, and process them to make it as nice as possible. Features are:
+- Crop: Maximise photo size based on e-book resolution.
+- Avoid face cropping: Use face detection to make the best crop position.
+- Rotation: Make the photo the good orientation. This depend on how the e-book is position when unused.
+- Exposure, Saturation, Contrast: Compensate the lack of brighness and color on the display of the e-book on screensaver mode.
 
-# Setup virtual environment
-
-1) In project folder: Shift + Right‑click → “Open Command Prompt here” in Explorer.
-2) python -m venv .venv
-3) .venv\Scripts\activate
-	Note: You should now see: (.venv) P:\PythonProjects\EbookImageOptimiser>
-4) Upgrade pip (recommended): python -m pip install --upgrade pip
-5) installer required package: pip install PySide6 Pillow PyInstaller opencv-python numpy
-6) Verify installation: pip list
-	You should see:
-		PyInstaller
-		PySide6
-		Pillow
-		...
-
-# Setup git
-	
-.venv/
-venv/
-__pycache__/
-*.pyc
+# Developper Scripts
+- scripts\setup_env.bat: Install modules inside the project
+- scripts\build_exe.bat: Build a exe file
