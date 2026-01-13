@@ -28,7 +28,6 @@ from src.preset import PresetManager
 
 
 class MainWindow(QMainWindow):
-    """PySide6 application for batch processing images with Kobo-oriented settings."""
     def __init__(self):
         super().__init__()
         self.setWindowTitle("E-book Image Optimiser - Batch Image Processor")
@@ -155,7 +154,7 @@ class MainWindow(QMainWindow):
         self.exp_slider.valueChanged.connect(self._update_exposure_lbl)
 
         exp_row.addWidget(self.exp_enable)
-        exp_row.addWidget(QLabel("Exposure (×)"))
+        exp_row.addWidget(QLabel("Exposure"))
         exp_row.addWidget(self.exp_slider, 1)
         exp_row.addWidget(self.exp_val_lbl)
         exp_row.addWidget(self.exp_default_btn)
@@ -163,7 +162,7 @@ class MainWindow(QMainWindow):
 
         self.exp_enable.toggled.connect(lambda on: self._set_row_enabled(on, [self.exp_slider, self.exp_default_btn]))
 
-        # ---- Saturation (0..100 -> ×/100) ----
+        # ---- Saturation ----
         sat_row = QHBoxLayout()
         self.sat_enable = QCheckBox("Enable")
         self.sat_enable.setChecked(True)
@@ -176,7 +175,7 @@ class MainWindow(QMainWindow):
         self.sat_slider.valueChanged.connect(lambda v: self.sat_val_lbl.setText(str(v)))
 
         sat_row.addWidget(self.sat_enable)
-        sat_row.addWidget(QLabel("Saturation (0-100 → ×/100)"))
+        sat_row.addWidget(QLabel("Saturation"))
         sat_row.addWidget(self.sat_slider, 1)
         sat_row.addWidget(self.sat_val_lbl)
         sat_row.addWidget(self.sat_default_btn)
@@ -184,7 +183,7 @@ class MainWindow(QMainWindow):
 
         self.sat_enable.toggled.connect(lambda on: self._set_row_enabled(on, [self.sat_slider, self.sat_default_btn]))
 
-        # ---- Contrast (0..300 -> ×/100) ----
+        # ---- Contrast ----
         ctr_row = QHBoxLayout()
         self.ctr_enable = QCheckBox("Enable")
         self.ctr_enable.setChecked(True)
@@ -197,7 +196,7 @@ class MainWindow(QMainWindow):
         self.ctr_slider.valueChanged.connect(lambda v: self.ctr_val_lbl.setText(str(v)))
 
         ctr_row.addWidget(self.ctr_enable)
-        ctr_row.addWidget(QLabel("Contrast (0-300 → ×/100)"))
+        ctr_row.addWidget(QLabel("Contrast"))
         ctr_row.addWidget(self.ctr_slider, 1)
         ctr_row.addWidget(self.ctr_val_lbl)
         ctr_row.addWidget(self.ctr_default_btn)
