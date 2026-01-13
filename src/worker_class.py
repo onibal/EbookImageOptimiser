@@ -52,7 +52,6 @@ class BatchWorker(QObject):
         self.log_msg.emit(f"Source folder: {self.folder}")
         self.log_msg.emit(f"Output folder: {out_dir}")
         self.log_msg.emit(
-            f"Settings: auto_landscape={self.params_template.auto_landscape}, crop_kobo={self.params_template.crop_kobo}, "
             f"avoid_face_cropping={self.params_template.avoid_face_cropping}, "
             f"exposure={exp_s}, saturation={sat_s}, contrast={ctr_s}, jpg_quality={self.params_template.jpg_quality}"
         )

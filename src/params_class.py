@@ -34,14 +34,12 @@ class ProcessingParams:
     use_exposure: bool = True
     use_saturation: bool = True
     use_contrast: bool = True
-    auto_landscape: bool = True  # Added missing attribute
 
     def with_paths(self, in_path: Path, out_path: Path) -> "ProcessingParams":
         """Return a copy of this params object with `in_path` and `out_path` set."""
         return ProcessingParams(
             in_path=in_path,
             out_path=out_path,
-            auto_landscape=self.auto_landscape,
             crop_kobo=self.crop_kobo,
             avoid_face_cropping=self.avoid_face_cropping,
             exposure_factor=self.exposure_factor,
