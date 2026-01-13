@@ -40,6 +40,7 @@ class ProcessingParams:
         return ProcessingParams(
             in_path=in_path,
             out_path=out_path,
+            rotation_angle=self.rotation_angle,
             crop_kobo=self.crop_kobo,
             avoid_face_cropping=self.avoid_face_cropping,
             exposure_factor=self.exposure_factor,
