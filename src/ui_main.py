@@ -20,7 +20,7 @@ from src import constants
 from src import params_class
 from src import helper
 from src import worker_class
-
+from src.preset import PresetManager
 
 # -----------------------------
 # Main Window (UI)
@@ -226,11 +226,16 @@ class MainWindow(QMainWindow):
         root.addLayout(actions_row)
         self.run_btn = QPushButton("Process images")
         self.run_btn.clicked.connect(self.on_run)
+        actions_row.addWidget(self.run_btn)
+
         self.stop_btn = QPushButton("Stop")
         self.stop_btn.setEnabled(False)
         self.stop_btn.clicked.connect(self.on_stop)
-        actions_row.addWidget(self.run_btn)
         actions_row.addWidget(self.stop_btn)
+
+        self.save_default_btn = QPushButton("Set as Default")
+        self.save_default_btn.clicked.connect(self.on_save_default)
+        actions_row.addWidget(self.save_default_btn)
 
         # Log
         log_box = QGroupBox("Log")
@@ -244,6 +249,9 @@ class MainWindow(QMainWindow):
 
         # Initialize labels
         self._update_exposure_lbl(self.exp_slider.value())
+
+        # Load saved settings if they exist
+        PresetManager.load_default_settings(self)
 
     # ---- UI helpers ----
 
@@ -342,3 +350,7 @@ class MainWindow(QMainWindow):
             self.thread.wait()
         self.thread = None
         self.worker = None
+
+    def on_save_default(self):
+        """Save current settings as default."""
+        PresetManager.save_default(self)
