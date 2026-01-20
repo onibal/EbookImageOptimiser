@@ -1,6 +1,5 @@
-# EbookImageOptimiser
-
-Batch image processor to optimise images, for an e-book screensaver. Unused, e-book can be used as photo display in the house, as screensavers. One issue is that without light from e-book, the photo are gray, dark (especially on Kobo Libra Colour).
+# EbookImageOptimiser descriptions
+Batch image processor to optimise images, for an e-book screensaver. Unused e-book can be used as photo display in the house, as screensavers. One issue is that without light from e-book, the photo are gray, dark (especially on Kobo Libra Colour).
 
 This app take a folder of photos, and process them to make it as nice as possible. Features are:
 - Crop: Maximise photo size based on e-book resolution.
@@ -10,7 +9,9 @@ This app take a folder of photos, and process them to make it as nice as possibl
 
 ![README-Screenshot](https://github.com/user-attachments/assets/f77a304a-b64c-485f-83b7-1d0f176ef0e9)
 
-# Developper Scripts![Uploading README-Screenshot.jpg…]()
-
-- scripts\setup_env.bat: Install modules inside the project
-- scripts\build_exe.bat: Build a exe file
+# How to setup
+1) Install Python 3.14.2
+2) Setup Virtual environment
+	scripts\setup_env.bat
+3) Generate exe file
+	scripts\build_exe.bat

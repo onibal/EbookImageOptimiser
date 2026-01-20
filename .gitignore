@@ -1,4 +1,4 @@
-build_source/
+dist/
 build/
 __pycache__
 *.spec
