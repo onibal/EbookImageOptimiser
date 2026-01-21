@@ -8,10 +8,9 @@ This app take a folder of photos, and process them to make it as nice as possibl
 - Exposure, Saturation, Contrast: Compensate the lack of brighness and color on the display of the e-book on screensaver mode.
 
 ![README-Screenshot](https://github.com/user-attachments/assets/f77a304a-b64c-485f-83b7-1d0f176ef0e9)
+[Uploading README-Screenshot.jpg…]()
 
-# How to setup
-1) Install Python 3.14.2
-2) Setup Virtual environment
-	scripts\setup_env.bat
-3) Generate exe file
-	scripts\build_exe.bat
+# Developper Scripts!
+
+- scripts\setup_env.bat: Install modules inside the project
+- scripts\build_exe.bat: Build a exe file
