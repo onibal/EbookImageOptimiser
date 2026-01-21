@@ -1,6 +1,8 @@
 dist/
 build/
 __pycache__
-*.spec
+app.spec
 .venv
 EbookImageOptimiser_Config.json
+.pylintrc
+.vscode
