@@ -1,7 +1,7 @@
 
 # === CONFIG =======================================================
 
-APP_VERSION = "1.0.1"
+APP_VERSION = "1.0.2"
 APP_NAME = f"EbookImageOptimiser-v{APP_VERSION}"
 ENTRY_POINT = "app.py"
 ICON = "app.ico"
