@@ -13,7 +13,10 @@ a = Analysis(
     [ENTRY_POINT],
     pathex=["."],
     binaries=[],
-    datas=[(ICON, ".")],
+	datas=[
+		(ICON, "."), 
+		('haarcascade_frontalface_default.xml', '.')
+	],
     hiddenimports=[],
     hookspath=[],
     runtime_hooks=[],
@@ -30,24 +33,15 @@ pyz = PYZ(a.pure, a.zipped_data)
 exe = EXE(
     pyz,
     a.scripts,
+    a.binaries,
+    a.datas,
     name=APP_NAME,
     icon=ICON,
-    exclude_binaries=True,
+    exclude_binaries=False,
     console=False,
     debug=False,
     strip=False,
     upx=True,
     bootloader_ignore_signals=False,
-)
-
-# === COLLECT PHASE  =============================
-
-coll = COLLECT(
-    exe,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
-    strip=False,                               # strip DLLs
-    upx=True,                                 # compress DLLs
-    name=APP_NAME,
+	onefile=True,
 )
